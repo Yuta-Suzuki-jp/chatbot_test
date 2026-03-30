@@ -554,7 +554,8 @@ const App = () => {
 
       {/* ユースケース切り替えナビゲーション（固定ヘッダーとして画面上部に設置） */}
       <div className="w-full bg-white shadow-sm z-50 border-b border-gray-200">
-        <div className="w-full px-3 py-2 flex gap-2 overflow-x-auto scrollbar-hide">
+        <div className="w-full px-3 py-2 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-2 justify-center min-w-max mx-auto">
           {Object.values(useCases).map((uc) => (
             <button
               key={uc.id}
@@ -567,6 +568,7 @@ const App = () => {
               {uc.label}
             </button>
           ))}
+          </div>
         </div>
       </div>
 
