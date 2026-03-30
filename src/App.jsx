@@ -554,12 +554,12 @@ const App = () => {
 
       {/* ユースケース切り替えナビゲーション（固定ヘッダーとして画面上部に設置） */}
       <div className="w-full bg-white shadow-sm z-50 flex justify-center border-b border-gray-200">
-        <div className="max-w-3xl w-full p-3 flex justify-center space-x-2 md:space-x-4 overflow-x-auto">
+        <div className="max-w-4xl w-full p-3 flex justify-center flex-wrap gap-2">
           {Object.values(useCases).map((uc) => (
             <button
               key={uc.id}
               onClick={() => handleCaseSwitch(uc.id)}
-              className={`px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap ${activeCaseKey === uc.id
+              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap ${activeCaseKey === uc.id
                 ? `${uc.buttonColor} text-white shadow-md`
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:shadow-sm'
                 }`}
